@@ -1,1 +1,27 @@
 <script src="https://sdk.minepi.com/pi-sdk.js"><script>
+
+<script>
+  //initialize the SDK
+  const Pi = window.Pi;
+  Pi.init({ version: "2.0" });
+
+    // This function is Required by Pi to handle interrupted payments
+    function
+    onIncompletePaymentFound(payment) {
+      console.log("Incomplete payment found:",payment);
+    //};
+
+  Pi.authenticate (['payments','username'],
+                   onIncompletePaymentFound)
+                      .then(fucntion(auth) {
+
+  console.log("Successfully authenticated!")
+    //
+      alert("Hello " + 
+            auth.user.username + " ! You are now signed in.");
+      })
+        .catch(function(error) {
+
+      console.error("Authentication failed:", error);
+        });
+      </script>
