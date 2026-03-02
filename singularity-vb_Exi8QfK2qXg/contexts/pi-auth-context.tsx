@@ -274,9 +274,12 @@ export function PiAuthProvider({ children }: { children: ReactNode }) {
       const parentCredentials = await requestParentCredentials();
 
       // If parent (App Studio) provides credentials, use iframe flow
-      if (parentCredentials) {
+      // Only use App Studio credentials if they actually contain a token
+        if (parentCredentials && parentCredentials.accessToken) {
+        console.log("Using App Studio credentials");
         await authenticateAndLogin(parentCredentials.accessToken, parentCredentials.appId);
-      } else {
+        } else {
+        console.log("No valid App Studio credentials — using Pi Browser authentication");
         // Fallback to Pi SDK authentication
         setAuthMessage("Loading Pi Network SDK...");
 
