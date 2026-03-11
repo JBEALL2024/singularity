@@ -1,5 +1,5 @@
 const Pi = window.Pi;
-Pi.init({ version: "2.0" });
+Pi.init({ version: "2.0, sandbox: true });
 
 function onIncompletePaymentFound(payment) {
   console.log("Incomplete payment found:", payment);
