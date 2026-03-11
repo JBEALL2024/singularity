@@ -1,3 +1,5 @@
+Pi, Pi Network, and the Pi logo are trademarks of the Pi Community Company.
+
 Singularity App for Pioneers and Pi Network Ecoystem
 Social Site for Ai, Humanity, Problem Solving & Evolving
 Where Intelligence Meets Humanity
